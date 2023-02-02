@@ -30,11 +30,11 @@ public class Job {
     @Override
     public String toString() {
         return "\nID: " + this.getId() +
-                "\nName: " + this.getName() +
-                "\nEmployer: " + this.getEmployer().toString() +
-                "\nLocation: " + this.getLocation().toString() +
-                "\nPosition Type: " + this.getPositionType().toString() +
-                "\nCore Competency: " + this.getCoreCompetency().toString() + "\n";
+                "\nName: " + (this.getName() == null || this.getName() == "" ? "Data not available" : this.getName()) +
+                "\nEmployer: " + (this.getEmployer().toString() == null || this.getEmployer().toString() == "" ? "Data not available" : this.getEmployer().toString()) +
+                "\nLocation: " + (this.getLocation().toString() == null || this.getLocation().toString() == "" ? "Data not available" : this.getLocation().toString()) +
+                "\nPosition Type: " + (this.getPositionType().toString() == null || this.getPositionType().toString() == "" ? "Data not available" : this.getPositionType().toString()) +
+                "\nCore Competency: " + (this.getCoreCompetency().toString() == null || this.getCoreCompetency().toString() == "" ? "Data not available" : this.getCoreCompetency().toString()) + "\n";
     }
 
     @Override
