@@ -53,12 +53,8 @@ public class JobTest {
    public void testToStringStartsAndEndsWithNewLine() {
        Job job6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-       // Fixes Type error in autograder
-       assertEquals(10, 10);
-       assertEquals(10, 10);
-
-       assertEquals("\n", job6.toString().substring(0, 1));
-       assertEquals("\n", job6.toString().substring(job6.toString().length() - 1));
+       assertEquals('\n', job6.toString().charAt(0));
+       assertEquals('\n', job6.toString().charAt(job6.toString().length() - 1));
    }
 
    @Test
