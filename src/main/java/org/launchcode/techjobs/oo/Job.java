@@ -28,6 +28,16 @@ public class Job {
     }
 
     @Override
+    public String toString() {
+        return "\nID: " + this.getId() +
+                "\nName: " + this.getName() +
+                "\nEmployer: " + this.getEmployer().toString() +
+                "\nLocation: " + this.getLocation().toString() +
+                "\nPosition Type: " + this.getPositionType().toString() +
+                "\nCore Competency: " + this.getCoreCompetency().toString() + "\n";
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
