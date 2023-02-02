@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.oo.test;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -48,6 +49,7 @@ public class JobTest {
        assertFalse(job1.equals(job2));
    }
 
+   //TODO: Figure out why this test is "Missing 2 invocations of assertEquals"
    @Test
    public void testToStringStartsAndEndsWithNewLine() {
        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
@@ -71,8 +73,8 @@ public class JobTest {
    }
 
    @Test
-    public void toStringHandlesEmptyField() {
-        Job job1 = new Job("", new Employer(), new Location(), new PositionType(), new CoreCompetency());
+    public void testToStringHandlesEmptyField() {
+        Job job1 = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
 
        assertEquals("\nID: 1\n" +
                "Name: Data not available\n" +
